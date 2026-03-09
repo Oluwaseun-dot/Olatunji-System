@@ -70,39 +70,39 @@
                         <div class="dots"><span></span><span></span><span></span></div>
                         <span class="terminal-title">Contact Us</span>
                     </div>
-                    <form id="main-contact-form">
-                        <div class="input-row">
-                            <div class="field">
-                                <label>Full name</label>
-                                <input type="text" name="from_name" placeholder="Full Name" required>
-                            </div>
-                            <div class="field">
-                                <label>your-email</label>
-                                <input type="email" name="user_email" placeholder="Business Email" required>
-                            </div>
-                        </div>
-                        
-                        <div class="field">
-                            <label>Service Selection</label>
-                            <select name="service_type" id="contact-service-select">
-                                <option value="ai-automation">AI & Automation Strategy</option>
-                                <option value="crm-ghl">CRM & GHL Architecture</option>
-                                <option value="shopify">Shopify Mastery Build</option>
-                                <option value="marketing">Digital Growth Engine</option>
-                                <option value="other">Custom System Inquiry</option>
-                            </select>
-                        </div>
+<form id="main-contact-form" action="https://formspree.io/f/xwvrvwrw" method="POST">
+    <div class="input-row">
+        <div class="field">
+            <label>Full name</label>
+            <input type="text" name="from_name" placeholder="Full Name" required>
+        </div>
+        <div class="field">
+            <label>your-email</label>
+            <input type="email" name="user_email" placeholder="Business Email" required>
+        </div>
+    </div>
+    
+    <div class="field">
+        <label>Service Selection</label>
+        <select name="service_type" id="contact-service-select">
+            <option value="ai-automation">AI & Automation Strategy</option>
+            <option value="crm-ghl">CRM & GHL Architecture</option>
+            <option value="shopify">Shopify Mastery Build</option>
+            <option value="marketing">Digital Growth Engine</option>
+            <option value="other">Custom System Inquiry</option>
+        </select>
+    </div>
 
-                        <div class="field">
-                            <label>Summary of your project</label>
-                            <textarea name="message" placeholder="write project description..." rows="5"></textarea>
-                        </div>
+    <div class="field">
+        <label>Summary of your project</label>
+        <textarea name="message" placeholder="write project description..." rows="5"></textarea>
+    </div>
 
-                        <button type="submit" id="submit-btn" class="btn-primary-3d">
-                            <span class="btn-text">Send Now</span>
-                            <div class="btn-glow-effect"></div>
-                        </button>
-                    </form>
+    <button type="submit" id="submit-btn" class="btn-primary-3d">
+        <span class="btn-text">Send Now</span>
+        <div class="btn-glow-effect"></div>
+    </button>
+</form>
                 </div>
 
             </div>
@@ -144,4 +144,5 @@
 
     <script src="contact.js"></script>
 </body>
+
 </html>
