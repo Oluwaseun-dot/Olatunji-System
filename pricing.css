@@ -107,4 +107,18 @@ input, select, textarea {
         grid-template-columns: 1fr; /* Stacks cards on mobile */
         max-width: 450px; /* Keeps the card from being too wide on mobile */
     }
+
+}
+
+/* Add this to your global CSS file */
+.reserve-success {
+    background: #1dbf73 !important; /* Fiverr Green / Success Green */
+    box-shadow: 0 0 20px rgba(29, 191, 115, 0.5) !important;
+    border-color: #1dbf73 !important;
+}
+
+.reserve-sending {
+    background: var(--blue) !important;
+    opacity: 0.7;
+    cursor: not-allowed;
 }
