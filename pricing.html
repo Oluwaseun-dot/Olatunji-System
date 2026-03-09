@@ -124,13 +124,13 @@
                     <h2>Book <span>Live Session</span></h2>
                     <p>Provide your details to sync your chosen consultation package.</p>
                 </div>
-                <form action="https://formspree.io/f/xwvrvwrw" method="POST" id="consult-form">
+                    <form action="https://formspree.io/f/xwvrvwrw" method="POST" id="consult-form">
                     <div class="form-row">
-                        <input type="text" placeholder="Your Full Name" required>
-                        <input type="email" placeholder="Business Email Address" required>
+                        <input type="text" name="full-name" placeholder="Your Full Name" required>
+                        <input type="email" name="email" placeholder="Business Email Address" required>
                     </div>
                     <div class="form-group">
-                        <select id="package-selector" required>
+                        <select id="package-selector" name="package" required>
                             <option value="" disabled selected>Selected Package</option>
                             <option value="AI Strategy Consult - $200">AI Strategy Consult - $200</option>
                             <option value="CRM Architecture Audit - $250">CRM Architecture Audit - $250</option>
@@ -138,9 +138,10 @@
                             <option value="Growth Engine Strategy - $300">Growth Engine Strategy - $300</option>
                         </select>
                     </div>
-                    <textarea placeholder="Briefly explain your current system challenges or project goals..." rows="8"></textarea>
-                    <button type="submit" class="btn-primary-3d">Reserve Your Session</button>
-                </form>
+                    <textarea name="challenges" placeholder="Briefly explain your current system challenges or project goals..." rows="8"></textarea>
+    
+                    <button type="submit" class="btn-primary-3d" id="submit-btn">Reserve Your Session</button>
+                 </form>
             </div>
         </div>
     </section>
@@ -181,3 +182,4 @@
     <script src="pricing.js"></script>
 </body>
 </html>
+
