@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - SYSTEM ERROR | OLATUNJI SYSTEM</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ff4b2b; /* Error Red */
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 75, 43, 0.5);
+            margin: 0;
+        }
+        .message {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        .btn-home {
+            padding: 15px 30px;
+            background: transparent;
+            border: 2px solid #ff4b2b;
+            color: #ff4b2b;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-home:hover {
+            background: #ff4b2b;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px #ff4b2b;
+        }
+        .glitch-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 2px);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch-overlay"></div>
+    <p class="error-code">404</p>
+    <p class="message">CRITICAL ERROR: REQUESTED DATA PATH NOT FOUND IN SYSTEM ARCHIVE.</p>
+    <a href="https://olatunjisystem.space" class="btn-home">Reboot to Home</a>
+</body>
+</html>
