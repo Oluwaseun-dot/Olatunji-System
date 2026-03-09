@@ -9,24 +9,6 @@ document.getElementById('main-contact-form').addEventListener('submit', function
     btn.style.opacity = "0.7";
     btn.disabled = true;
 
-    // EmailJS Send
-    emailjs.sendForm('default_service', 'service_pstcadc', this)
-        .then(() => {
-            btn.innerHTML = "DATA SYNCED SUCCESSFULLY";
-            btn.style.background = "#28a745"; // Success Green
-            this.reset();
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = "";
-                btn.disabled = false;
-                btn.style.opacity = "1";
-            }, 4000);
-        }, (error) => {
-            btn.innerHTML = "TRANSMISSION FAILED";
-            btn.style.background = "#dc3545"; // Error Red
-            console.log('FAILED...', error);
-        });
-});
 
 const formContainer = document.querySelector('.contact-form-panel');
 const formInputs = document.querySelectorAll('#main-contact-form input, #main-contact-form textarea, #main-contact-form select');
@@ -41,4 +23,47 @@ formInputs.forEach(input => {
     input.addEventListener('blur', () => {
         formContainer.style.borderColor = "rgba(255, 255, 255, 0.1)";
     });
+
 });
+
+    <script>
+  const contactForm = document.getElementById('main-contact-form');
+  const contactBtn = document.getElementById('submit-btn');
+  const btnText = contactBtn.querySelector('.btn-text');
+
+  contactForm.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      
+      // Visual feedback: Start Transmission
+      btnText.innerHTML = "INITIATING TRANSMISSION...";
+      contactBtn.style.opacity = "0.7";
+      contactBtn.style.pointerEvents = "none";
+
+      const formData = new FormData(event.target);
+      
+      fetch(event.target.action, {
+          method: contactForm.method,
+          body: formData,
+          headers: {
+              'Accept': 'application/json'
+          }
+      }).then(response => {
+          if (response.ok) {
+              // Success State
+              btnText.innerHTML = "TRANSMISSION SUCCESSFUL";
+              contactBtn.style.background = "#1dbf73"; // Success Green
+              contactBtn.style.opacity = "1";
+              contactForm.reset();
+          } else {
+              // Fail State
+              btnText.innerHTML = "TRANSMISSION FAILED";
+              contactBtn.style.background = "#ff4b2b"; // Error Red
+              contactBtn.style.pointerEvents = "all";
+          }
+      }).catch(error => {
+          btnText.innerHTML = "SYSTEM OFFLINE";
+          contactBtn.style.background = "#ff4b2b";
+          contactBtn.style.pointerEvents = "all";
+      });
+  });
+</script>
