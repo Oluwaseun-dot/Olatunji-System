@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation | Olatunji System Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="pricing.css">
+</head>
+<body class="dark-theme">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">OLATUNJI <span>SYSTEM</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="project.html">Past Projects</a></li>
+                <li><a href="contact.html" class="btn-blue">Contact Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="pricing-hero">
+        <div class="container">
+            <span class="hero-tag fade-in">Proeject Architecture</span>
+            <h1 class="reveal-text">Live <span>Consultation</span></h1>
+            <p class="fade-in-delayed">Reserve a high-level session with the leaders to architect or scale your autonomous business.</p>
+        </div>
+    </section>
+
+    <section class="pricing-grid-section">
+        <div class="container">
+            <div class="pricing-layout">
+                
+                <div class="pricing-card reveal-on-scroll">
+                    <div class="card-inner-padding">
+                        <span class="tier-tag">Module 01</span>
+                        <h2>AI Strategy <span>Consult</span></h2>
+                        <div class="price-box">
+                            <span class="currency">$</span><span class="amount">200</span>
+                        </div>
+                        <ul class="feature-list">
+                            <li><b>30-Min High-Level Strategy Call</b></li>
+                            <li><b>Workflow Efficiency Audit</b></li>
+                            <li><b>n8n / Make.com Logic Blueprint</b></li>
+                            <li><b>AI Agent Deployment Roadmap</b></li>
+                            <li><b>Tech Stack Integration Review</b></li>
+                            <li><b>Post-Call Summary Report</b></li>
+                        </ul>
+                        <button class="select-plan btn-primary-3d" data-package="AI Strategy Consult - $200">Book Session</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card reveal-on-scroll">
+                    <div class="card-inner-padding">
+                        <span class="tier-tag">Module 02</span>
+                        <h2>CRM Architecture <span>Audit</span></h2>
+                        <div class="price-box">
+                            <span class="currency">$</span><span class="amount">250</span>
+                        </div>
+                        <ul class="feature-list">
+                            <li><b>30-Min GHL Infrastructure Call</b></li>
+                            <li><b>Lead Flow & Nurture Audit</b></li>
+                            <li><b>A2P 10DLC Compliance Review</b></li>
+                            <li><b>Pipeline Optimization Blueprint</b></li>
+                            <li><b>Snapshot Customization Plan</b></li>
+                            <li><b>Automation Logic Debugging</b></li>
+                        </ul>
+                        <button class="select-plan btn-primary-3d" data-package="CRM Architecture Audit - $250">Book Session</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card reveal-on-scroll">
+                    <div class="card-inner-padding">
+                        <span class="tier-tag">Module 03</span>
+                        <h2>Shopify Mastery <span>Session</span></h2>
+                        <div class="price-box">
+                            <span class="currency">$</span><span class="amount">150</span>
+                        </div>
+                        <ul class="feature-list">
+                            <li><b>30-Min UX & Conversion Call</b></li>
+                            <li><b>Core Web Vitals Performance Audit</b></li>
+                            <li><b>Liquid Theme Structure Review</b></li>
+                            <li><b>CRO Optimization Blueprint</b></li>
+                            <li><b>App Stack & Speed Analysis</b></li>
+                            <li><b>Frontend UI Strategy Page</b></li>
+                        </ul>
+                        <button class="select-plan btn-primary-3d" data-package="Shopify Mastery Session - $150">Book Session</button>
+                    </div>
+                </div>
+
+                <div class="pricing-card reveal-on-scroll">
+                    <div class="card-inner-padding">
+                        <span class="tier-tag">Module 04</span>
+                        <h2>Growth Engine <span>Strategy</span></h2>
+                        <div class="price-box">
+                            <span class="currency">$</span><span class="amount">300</span>
+                        </div>
+                        <ul class="feature-list">
+                            <li><b>30-Min ROI Optimization Call</b></li>
+                            <li><b>Meta & Google Ads Channel Audit</b></li>
+                            <li><b>Semantic Search & SEO Blueprint</b></li>
+                            <li><b>Omnichannel Scaling Roadmap</b></li>
+                            <li><b>GA4 & Tracking Implementation Plan</b></li>
+                            <li><b>Customer Intent Analysis</b></li>
+                        </ul>
+                        <button class="select-plan btn-primary-3d" data-package="Growth Engine Strategy - $300">Book Session</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-anchor" class="enrollment-section">
+        <div class="container">
+            <div class="form-card reveal-on-scroll">
+                <div class="form-header">
+                    <h2>Book <span>Live Session</span></h2>
+                    <p>Provide your details to sync your chosen consultation package.</p>
+                </div>
+                    <form action="https://formspree.io/f/xwvrvwrw" method="POST" id="consult-form">
+                    <div class="form-row">
+                        <input type="text" name="full-name" placeholder="Your Full Name" required>
+                        <input type="email" name="email" placeholder="Business Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="package-selector" name="package" required>
+                            <option value="" disabled selected>Selected Package</option>
+                            <option value="AI Strategy Consult - $200">AI Strategy Consult - $200</option>
+                            <option value="CRM Architecture Audit - $250">CRM Architecture Audit - $250</option>
+                            <option value="Shopify Mastery Session - $150">Shopify Mastery Session - $150</option>
+                            <option value="Growth Engine Strategy - $300">Growth Engine Strategy - $300</option>
+                        </select>
+                    </div>
+                    <textarea name="challenges" placeholder="Briefly explain your current system challenges or project goals..." rows="8"></textarea>
+    
+                    <button type="submit" class="btn-primary-3d" id="submit-btn">Reserve Your Session</button>
+                 </form>
+            </div>
+        </div>
+    </section>
+
+   <div class="system-status-bar">
+    <div class="status-dot"></div>
+    <p>System Status: <span class="status-text">Operational</span> | Active Partners: <span class="partner-count">20+</span></p>
+   </div>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h2>OLATUNJI <span>SYSTEM</span></h2>
+            <p>Building the future of autonomous business.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Connect</h4>
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="https://x.com/BuiltByOlatunji">X / Twitter</a></li>
+                <li><a href="https://github.com/Oluwaseun-dot">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Olatunji System | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+    <script src="pricing.js"></script>
+</body>
+</html>
