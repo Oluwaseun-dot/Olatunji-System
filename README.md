@@ -22,5 +22,5 @@ This repository contains the core deployment files for the **Olatunji System**â€
 - `contact.css`: Terminal-specific styling and glassmorphism logic.
 
 ---
-**Lead Architect:** Olatunji Oluwaseun 
+**CEO & Team Leader:** Olatunji Oluwaseun 
 **Status:** System Online / Deployment Active
