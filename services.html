@@ -175,21 +175,22 @@
         <div class="container">
             <div class="form-card">
                 <h2>Reach out for <span>any services you want</span></h2>
-                <form id="contact-form">
-                    <div class="form-row">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Business Email" required>
-                    </div>
-                    <select required class="styled-select">
-                        <option value="" disabled selected>Select Required System Module</option>
-                        <option value="ai">AI & Automation Systems</option>
-                        <option value="crm">CRM & GHL Architecture</option>
-                        <option value="ecommerce">Shopify & E-commerce</option>
-                        <option value="marketing">Digital Marketing Growth</option>
-                    </select>
-                    <textarea placeholder="Describe your project goals and specific requirements in detail..." rows="10"></textarea>
-                    <button type="submit" class="btn-primary-3d">SEND NOW</button>
-                </form>
+<form action="https://formspree.io/f/xwvrvwrw" method="POST" id="services-contact-form">
+    <div class="form-row">
+        <input type="text" name="full-name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
+    </div>
+    <select name="system-module" required class="styled-select">
+        <option value="" disabled selected>Select Required System Module</option>
+        <option value="ai">AI & Automation Systems</option>
+        <option value="crm">CRM & GHL Architecture</option>
+        <option value="ecommerce">Shopify & E-commerce</option>
+        <option value="marketing">Digital Marketing Growth</option>
+    </select>
+    <textarea name="project-details" placeholder="Describe your project goals and specific requirements in detail..." rows="10"></textarea>
+    
+    <button type="submit" id="services-submit-btn" class="btn-primary-3d">SEND NOW</button>
+</form>
             </div>
         </div>
     </section>
@@ -224,4 +225,5 @@
 
     <script src="services.js"></script>
 </body>
+
 </html>
