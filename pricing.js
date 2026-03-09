@@ -28,38 +28,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const form = document.getElementById('system-terminal-form');
-const btn = document.getElementById('submit-btn');
+  const form = document.getElementById('consult-form');
+  const btn = document.getElementById('submit-btn');
 
-form.addEventListener('submit', async function(event) {
-    event.preventDefault(); // Stops the page from refreshing
-    
-    btn.innerHTML = "TRANSMITTING...";
-    btn.classList.add('reserve-sending');
+  form.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevents page reload
+      
+      btn.innerHTML = "TRANSMITTING...";
+      btn.style.opacity = "0.7";
 
-    const data = new FormData(event.target);
-    
-    // Sending the data to Formspree
-    fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            // SUCCESS STATE
-            btn.innerHTML = "Sending SUCCESSFUL";
-            btn.classList.remove('reserve-sending');
-            btn.classList.add('reserve-success');
-            form.reset(); // Clears the form for the next lead
-        } else {
-            // ERROR STATE
-            btn.innerHTML = "SYSTEM ERROR: RETRY";
-            btn.style.background = "#ff4b2b";
-        }
-    }).catch(error => {
-        btn.innerHTML = "CONNECTION LOST";
-        btn.style.background = "#ff4b2b";
-    });
-});
+      const data = new FormData(event.target);
+      
+      fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+          }
+      }).then(response => {
+          if (response.ok) {
+              btn.innerHTML = "TRANSMISSION SUCCESSFUL";
+              btn.style.background = "#1dbf73"; // Success Green
+              btn.style.opacity = "1";
+              form.reset();
+          } else {
+              btn.innerHTML = "TRANSMISSION FAILED";
+              btn.style.background = "#ff4b2b"; // Error Red
+          }
+      }).catch(error => {
+          btn.innerHTML = "CONNECTION ERROR";
+          btn.style.background = "#ff4b2b";
+      });
+  });
