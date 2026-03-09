@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Olatunji System Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="contact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("KI2yYHdw-I_zVcj5r");
+      })();
+    </script>
+</head>
+<body class="dark-theme">
+    <div class="bg-glow glow-contact"></div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">OLATUNJI <span>SYSTEM</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="projects.html">Past Projects</a></li>
+                <li><a href="contact.html" class="active btn-blue">Contact Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content-box">
+                <h1 class="reveal-text">CONTACT <span>US NOW</span></h1>
+                <p class="fade-in">Ready to architect your autonomous future? From high-conversion Shopify architectures and CRM infrastructure to AI-driven growth engines, submit your project requirements to the architect terminal. Let’s engineer a business that operates at peak efficiency</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-interface-section">
+        <div class="container">
+            <div class="contact-split-grid">
+                
+                <div class="contact-info-panel">
+                    <div class="intel-card reveal-on-scroll">
+                        <span class="label">System Location</span>
+                        <p>Lagos, Nigeria | Global Remote</p>
+                    </div>
+
+                    <div class="intel-card reveal-on-scroll">
+                        <span class="label">Direct Terminal</span>
+                        <p>Olatunji Matthew</p>
+                        <a href="mailto:your-email@example.com" class="info-link">Open Mail Channel</a>
+                    </div>
+
+                    <div class="intel-card reveal-on-scroll">
+                        <span class="label">Platform Presence</span>
+                        <div class="social-grid">
+                            <a href="#" class="social-pill">LinkedIn</a>
+                            <a href="https://www.fiverr.com/oluwaseun_gopro" class="social-pill">Fiverr</a>
+                            <a href="#" class="social-pill">Upwork</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel reveal-on-scroll">
+                    <div class="terminal-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <span class="terminal-title">Contact Us</span>
+                    </div>
+                    <form id="main-contact-form">
+                        <div class="input-row">
+                            <div class="field">
+                                <label>Full name</label>
+                                <input type="text" name="from_name" placeholder="Full Name" required>
+                            </div>
+                            <div class="field">
+                                <label>your-email</label>
+                                <input type="email" name="user_email" placeholder="Business Email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label>Service Selection</label>
+                            <select name="service_type" id="contact-service-select">
+                                <option value="ai-automation">AI & Automation Strategy</option>
+                                <option value="crm-ghl">CRM & GHL Architecture</option>
+                                <option value="shopify">Shopify Mastery Build</option>
+                                <option value="marketing">Digital Growth Engine</option>
+                                <option value="other">Custom System Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label>Summary of your project</label>
+                            <textarea name="message" placeholder="write project description..." rows="5"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn-primary-3d">
+                            <span class="btn-text">Send Now</span>
+                            <div class="btn-glow-effect"></div>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+ <div class="system-status-bar">
+    <div class="status-dot"></div>
+    <p>System Status: <span class="status-text">Operational</span> | Active Partners: <span class="partner-count">20+</span></p>
+   </div>
+
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h2>OLATUNJI <span>SYSTEM</span></h2>
+            <p>Building the future of autonomous business.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Connect</h4>
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="https://x.com/BuiltByOlatunji">X / Twitter</a></li>
+                <li><a href="https://github.com/Oluwaseun-dot">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Olatunji System | All Rights Reserved.</p>
+    </div>
+  </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

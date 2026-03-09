@@ -1,0 +1,202 @@
+/* Contact Specific Architecture */
+.contact-hero { padding: 180px 10% 60px; text-align: center; }
+
+.contact-interface-section {
+    padding: 0 10% 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Left Panel: Info */
+.contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.label {
+    display: block;
+    color: var(--blue);
+    font-family: 'Orbitron';
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.info-group p { font-size: 1.2rem; font-weight: 700; color: #fff; }
+.info-link { color: #888; text-decoration: none; transition: 0.3s; }
+.info-link:hover { color: var(--blue); }
+
+/* Right Panel: Glass Form */
+.contact-form-panel {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    padding: 60px 8%;
+    backdrop-filter: blur(30px);
+}
+
+.field { margin-bottom: 25px; }
+.field label {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 18px;
+    border-radius: 12px;
+    color: #fff;
+    font-family: 'Inter';
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--blue);
+    background: rgba(255,255,255,0.08);
+    outline: none;
+}
+
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* Mobile Response */
+@media (max-width: 992px) {
+    .contact-split-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .contact-hero h1 { font-size: 3rem; }
+    .contact-interface-section { padding: 0 5% 80px; }
+}
+
+
+/* Hero Refinement */
+.contact-hero { padding: 180px 10% 60px; text-align: center; }
+.hero-content-box { max-width: 800px; margin: 0 auto; }
+
+/* Intel Cards (Left Side) */
+.contact-info-panel { display: flex; flex-direction: column; gap: 20px; }
+.intel-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s ease;
+}
+.intel-card:hover { border-color: var(--blue); transform: translateX(10px); }
+
+.label { color: var(--blue); font-family: 'Orbitron'; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+.social-pill {
+    display: inline-block; padding: 8px 15px; background: rgba(255,255,255,0.05);
+    border-radius: 50px; font-size: 0.8rem; color: #fff; text-decoration: none;
+    margin-right: 8px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
+}
+.social-pill:hover { background: var(--blue); border-color: var(--blue); }
+
+/* Terminal Form (Right Side) */
+.contact-form-panel {
+    background: #0a0a0a; border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 30px; padding: 0; overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+.terminal-header {
+    background: rgba(255,255,255,0.05); padding: 15px 25px;
+    display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.dots { display: flex; gap: 8px; margin-right: 20px; }
+.dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+.terminal-title { font-family: 'Orbitron'; font-size: 0.7rem; color: #666; }
+
+#main-contact-form { padding: 40px; }
+
+/* 3D Tech Button */
+.btn-primary-3d {
+    position: relative; width: 100%; padding: 20px; border-radius: 12px;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #fff; font-family: 'Orbitron'; font-weight: 700; border: none;
+    cursor: pointer; overflow: hidden; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn-primary-3d:hover { transform: scale(1.02); box-shadow: 0 0 30px rgba(0, 123, 255, 0.5); }
+.btn-primary-3d:active { transform: scale(0.98); }
+
+
+/* 1. The Reactive Glow Container */
+.contact-form-panel {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 2. When any input is clicked/focused, the whole box glows */
+.contact-form-panel:focus-within {
+    border-color: rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 40px rgba(0, 123, 255, 0.15), 
+                inset 0 0 20px rgba(0, 123, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+/* 3. Subtle pulse animation for the header line when active */
+.contact-form-panel:focus-within .terminal-header {
+    border-bottom: 1px solid rgba(0, 123, 255, 0.3);
+    background: rgba(0, 123, 255, 0.03);
+}
+
+/* 4. Make the terminal dots glow colors when active */
+.contact-form-panel:focus-within .dots span:nth-child(1) { background: #ff5f56; box-shadow: 0 0 10px #ff5f56; }
+.contact-form-panel:focus-within .dots span:nth-child(2) { background: #ffbd2e; box-shadow: 0 0 10px #ffbd2e; }
+.contact-form-panel:focus-within .dots span:nth-child(3) { background: #27c93f; box-shadow: 0 0 10px #27c93f; }
+
+/* 5. Input Field Focus Enhancement */
+.field input:focus, 
+.field select:focus, 
+.field textarea:focus {
+    background: rgba(0, 123, 255, 0.05) !important;
+    border-color: var(--blue) !important;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+}
+
+
+.btn-primary-3d:hover {
+    letter-spacing: 2px; /* Professional Apple-style expansion */
+    box-shadow: 0 0 40px rgba(0, 123, 255, 0.6);
+    filter: brightness(1.1);
+}
+
+/* --- Service Module Selection Styling --- */
+
+#contact-service-select {
+    color: #000000; /* Force text color to black */
+    background: #ffffff; /* Clean white background for contrast */
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Ensuring all options inside the dropdown are also black */
+#contact-service-select option {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+}
+
+/* Optional: Slight blue glow when the user opens the dropdown */
+#contact-service-select:focus {
+    background: #ffffff;
+    color: #000000;
+    border-color: var(--blue);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+}
