@@ -1044,4 +1044,120 @@ footer {
 
 .section-subtitle {
     color: rgba(255, 255, 255, 0.7);
+
+}
+
+/* --- Final Global Mobile & Tablet Refinement --- */
+
+@media (max-width: 1024px) {
+    /* Fix for the Image/Text Overlay Section */
+    .story-wrapper {
+        flex-direction: column !important;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .story-image-panel {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-3d-container {
+        height: 350px !important; /* Smaller height for mobile viewing */
+        min-height: 300px;
+        border-radius: 25px;
+    }
+
+    .story-text-panel {
+        margin-left: 0 !important; /* Remove the overlap for mobile */
+        width: 100% !important;
+        height: auto !important; /* Let content dictate height */
+        padding: 40px 25px !important;
+        border-radius: 25px;
+        margin-top: -40px; /* Slight overlap on the bottom of the image for 3D effect */
+    }
+
+    .card-inner-content {
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation Cleanup */
+    .glass-nav {
+        padding: 10px 20px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        display: none; /* Hide standard links to prevent bunching */
+    }
+
+    /* Hero Section Spacing */
+    .hero {
+        padding: 0 5%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem !important; /* Prevent text clipping */
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Skills Matrix Mobile Fit */
+    .skills-matrix {
+        padding: 60px 5%;
+    }
+
+    .skills-matrix .container {
+        padding: 40px 20px !important;
+        width: 100%;
+    }
+
+    /* Skills Progress Line logic */
+    .skill-info {
+        font-size: 0.75rem;
+    }
+
+    /* Pricing & Review Grid Fix */
+    .pricing-grid, .review-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    /* System Status Bar - Move for mobile thumbs */
+    .system-status-bar {
+        bottom: 10px;
+        left: 10px;
+        font-size: 0.65rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Fix for ultra-small screens */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .fiverr-glass-card {
+        padding: 25px 15px;
+    }
+
+    .fiverr-stats {
+        grid-template-columns: 1fr; /* Stack stats for narrow phones */
+        text-align: center;
+    }
 }
