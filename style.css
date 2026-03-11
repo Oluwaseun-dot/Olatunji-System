@@ -1017,7 +1017,7 @@ footer {
     position: relative;
     padding: 100px 0;
     /* Replace 'assets/tech-bg.jpg' with your actual background image path */
-    background: url('assets/the1\ \(2\).png') no-repeat center center/cover;
+    background: url('the1\ \(2\).avif') no-repeat center center/cover;
     background-attachment: fixed; /* Parallax effect for that Apple feel */
     overflow: hidden;
 }
@@ -1161,3 +1161,4 @@ footer {
         text-align: center;
     }
 }
+
